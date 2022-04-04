@@ -1,0 +1,25 @@
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">{{ .Title }}</h1>
+        <h5 class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      {{ .Content }}
+    </div>
+
+  <div class="mw8 center">
+    <section class="flex-ns flex-wrap justify-around mt5">
+      {{ range  .Pages }}
+        <div class="relative w-100 mb4 bg-white">
+          {{ partial "summary-with-image.html" . }}
+        </div>
+      {{ end }}
+    </section>
+  </div>
+  </div>
+</section>
