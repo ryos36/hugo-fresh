@@ -53,6 +53,15 @@ Section Styles
     }
 }
 
+.long-divider {
+    height: 2px;
+    background: $fade-grey;
+    width: 100%;
+    &.is-centered {
+        margin: 0 auto;
+    }
+}
+
 //Wrapper
 .content-wrapper {
     padding: 60px 0;

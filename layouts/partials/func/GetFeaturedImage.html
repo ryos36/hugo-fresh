@@ -28,8 +28,14 @@
 {{ else }}
     {{ $img := (.Resources.ByType "image").GetMatch "*cover*" }}
     {{ with $img }}
-        {{ $linkToCover = .Permalink }}
+        {{ $linkToCover = $img }}
     {{ end }}
+{{ end }}
+
+{{ if $linkToCover }}
+{{ if not ( hasPrefix $linkToCover "/" ) }}
+    {{ $linkToCover = path.Join .RelPermalink $linkToCover }}
+{{ end }}
 {{ end }}
 
 {{/* return either a permalink, or an empty string. Note that partials can only have a single

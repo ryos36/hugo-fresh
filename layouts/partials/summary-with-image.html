@@ -1,15 +1,16 @@
 {{- /* copy from ananke, but use bulma instead of tachyons */ -}}
-<article class="menu-list">
+<article class="menu-list" >
+  <div class="mt-20 mb-20" >
   <a href="{{ .Permalink }}">
     <div class="columns">
       {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       {{ if $featured_image }}
         <div class="column is-one-quarter">
-          <img src="{{ $featured_image }}" width="185" alt="image from {{ .Title }}">
+          <img src="{{ $featured_image }}" width="240" alt="image from {{ .Title }}">
         </div>
       {{ end }}
       <div class="column">
-        <h2 class="title section-title is-2">{{ .Title }}</h2>
+        <h2 class="title section-title is-3">{{ .Title }}</h2>
         <p class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</p>
         <p class="has-text-link">
           {{ .Summary }}
@@ -17,5 +18,6 @@
       </div>
     </div>
   </a>
-  <div class="divider"></div>
+  </div>
+  <div class="long-divider"></div>
 </article>
