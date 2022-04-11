@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  <head>
-    {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ partial "css.html" . }}
-    <link rel="stylesheet" type="text/css" href="/css/tachyons.css">
-  </head>
-  <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="status"></div>
-    </div>
+{{ define "main" }}
 
     {{ partial "list/list.html" . }}
 
@@ -18,13 +6,4 @@
     {{ partial "footer.html" . }}
     {{ end }}
 
-    <!-- Back To Top Button -->
-    <div id="backtotop"><a href="#"></a></div>
-
-    {{ if .Params.sidebar }}
-    {{ partial "single/sidebar.html" . }}
-    {{ end }}
-
-    {{ partial "javascript.html" . }}
-  </body>
-</html>
+{{ end }}

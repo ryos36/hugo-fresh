@@ -4,6 +4,8 @@
     {{ partial "meta.html" . }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "css.html" . }}
+    {{ block "head" . }}
+    {{ end }}
   </head>
   <body>
     <!-- Preloader -->

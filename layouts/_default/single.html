@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  <head>
-    {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ partial "css.html" . }}
-  </head>
-  <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="status"></div>
-    </div>
-
-    {{ block "main" . }}
+{{ define "head" }}
+    <link rel="stylesheet" type="text/css" href="/css/my_div.css">
+{{ end }}
+{{ define "main" }}
 
     {{ partial "single/single.html" . }}
 
@@ -26,8 +16,4 @@
     {{ partial "single/sidebar.html" . }}
     {{ end }}
 
-    {{ end }}
-
-    {{ partial "javascript.html" . }}
-  </body>
-</html>
+{{ end }}

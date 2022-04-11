@@ -1,21 +1,21 @@
-{{- /* copy from ananke */ -}}
-<article class="bb b--black-10">
-  <a class="db pv4 ph3 ph0-l no-underline dark-gray dim" href="{{ .Permalink }}">
-    <div class="flex flex-column flex-row-ns">
+{{- /* copy from ananke, but use bulma instead of tachyons */ -}}
+<article class="menu-list">
+  <a href="{{ .Permalink }}">
+    <div class="columns">
       {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       {{ if $featured_image }}
-        <div class="pr3-ns mb4 mb0-ns w-80 w-20-ns">
-          <img src="{{ $featured_image }}" class="db" width="185" alt="image from {{ .Title }}">
+        <div class="column is-one-quarter">
+          <img src="{{ $featured_image }}" width="185" alt="image from {{ .Title }}">
         </div>
       {{ end }}
-      <div class="w-100{{ if $featured_image }} w-70-ns pl3-ns{{ end }}">
-        <h1 class="f3 fw1 athelas mt0 lh-title">{{ .Title }}</h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height">
+      <div class="column">
+        <h2 class="title section-title is-2">{{ .Title }}</h2>
+        <p class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</p>
+        <p class="has-text-link">
           {{ .Summary }}
-        </div>
-        {{/* TODO: add author
-        <p class="f6 lh-copy mv0">By {{ .Author }}</p> */}}
+        </p>
       </div>
     </div>
   </a>
+  <div class="divider"></div>
 </article>
