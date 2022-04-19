@@ -74,7 +74,7 @@
 
             <div class="navbar-dropdown">
               {{- range .sublinks }}
-              <a href="{{ $url }}" class="navbar-item">
+              <a href="{{ $url }}" class="navbar-item is-primary">
                 {{ .title }}
               </a>
               {{- end }}
@@ -82,12 +82,12 @@
           </div>
           {{- else if .button }}
           <a href="{{ $url }}" class="navbar-item">
-            <span class="button signup-button rounded secondary-btn raised">
+            <span class="button signup-button rounded primary-btn raised">
               {{ .title }}
             </span>
           </a>
           {{- else }}
-          <a href="{{ $url }}" class="navbar-item is-secondary">
+          <a href="{{ $url }}" class="navbar-item is-primary">
             {{ .title }}
           </a>
           {{- end }}
