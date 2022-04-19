@@ -13,9 +13,15 @@
     </div>
 
     <div class="menu">
-      {{ range  .Pages }}
+      {{ range .Paginator.Pages }}
          {{ partial "summary-with-image.html" . }}
       {{ end }}
+    </div>
+
+    <div class="columns">
+    <div class="column is-2 is-left mt-20">
+    {{ template "_internal/pagination.html" . }}
+    </div>
     </div>
   </div>
 </section>
