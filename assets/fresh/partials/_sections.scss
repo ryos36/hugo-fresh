@@ -10,6 +10,9 @@ Section Styles
     &.section-feature-grey {
         background-color: $section-grey;
     }
+    &.section-primary {
+        background-color: $primary;
+    }
     &.section-secondary {
         background-color: $secondary;
     }
@@ -46,7 +49,7 @@ Section Styles
 .divider {
     height: 3px;
     border-radius: 50px;
-    background: $secondary;
+    background: $primary;
     width: 60px;
     &.is-centered {
         margin: 0 auto;
