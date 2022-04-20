@@ -1,10 +1,10 @@
 {{ $partialPath := "list/content.html" }}
 {{ if .Section }}
-{{ $partialPath := printf "%s/list/content.html" .Section }}
+{{ $partialPath = printf "%s/list/content.html" .Section }}
 {{ end }}
 
-{{ partial "navbar.html" . }}
-{{ partial "navbar-clone.html" . }}
+{{ .Section }}
+{{ templates.Exists (path.Join "partials/" $partialPath) }}
 {{ if templates.Exists (path.Join "partials/" $partialPath) }}
     {{ partial $partialPath . }}
 {{ else }}
