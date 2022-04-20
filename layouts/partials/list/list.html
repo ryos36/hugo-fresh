@@ -3,8 +3,6 @@
 {{ $partialPath = printf "%s/list/content.html" .Section }}
 {{ end }}
 
-{{ .Section }}
-{{ templates.Exists (path.Join "partials/" $partialPath) }}
 {{ if templates.Exists (path.Join "partials/" $partialPath) }}
     {{ partial $partialPath . }}
 {{ else }}
