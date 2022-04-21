@@ -25,9 +25,10 @@
       </div>
 
       <div class="column is-7 mt-60">
+        {{ with $features }}
         {{- range $features }}
         <article class="media icon-box">
-          {{ with .icon }}
+          {{ if .icon }}
           <figure class="media-left">
             <p class="image">
               <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
@@ -52,6 +53,7 @@
 
           </div>
         </article>
+        {{- end }}
         {{- end }}
       </div>
     </div>
