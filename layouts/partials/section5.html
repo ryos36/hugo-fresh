@@ -1,6 +1,8 @@
 {{- $section5 := .Site.Params.section5 }}
 {{- $id    := index $section5 "id" }}
 <section {{ if $id }} id="{{ $id }}" {{ end }} class="section section-light-grey is-medium">
+  <div class="is-mobile mt-40"></div>
+
   <div class="container">
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2 is-spaced">Drop us a line or two </h2>
