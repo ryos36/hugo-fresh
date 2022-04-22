@@ -19,7 +19,7 @@ Sidebar Styles
         transform: scale(0.07);
         transform-origin: 0 0;
         path {
-            stroke: $secondary;
+            stroke: $primary;
             stroke-width: 40px;
             stroke-linecap: round;
             stroke-linejoin: round;
@@ -102,7 +102,7 @@ Sidebar Styles
             transition: all .3s;
             cursor: pointer;
             &:hover {
-                stroke: $secondary;
+                stroke: $primary;
                 transform: rotate(180deg);
             }
         }
@@ -166,7 +166,7 @@ Sidebar Styles
             position: relative;
         }
         li.have-children.active > a, li.have-children.active > a span, li.have-children.active > a span:after {
-            color: $secondary;
+            color: $primary;
         }
         li.active.have-children span::after {
             -moz-transform: rotate(90deg);
